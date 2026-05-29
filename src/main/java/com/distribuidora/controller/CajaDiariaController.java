@@ -12,6 +12,7 @@ import java.math.BigDecimal;
 @RestController
 @RequestMapping("/api/v1/caja")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*")
 public class CajaDiariaController {
 
     private final CajaDiariaService cajaDiariaService;

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.distribuidora.service.ProductoServiceTest
--------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.765 s -- in com.distribuidora.service.ProductoServiceTest
