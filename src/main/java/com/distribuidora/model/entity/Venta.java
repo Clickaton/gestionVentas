@@ -27,9 +27,15 @@ public class Venta {
     @Column(nullable = false)
     private LocalDateTime fechaHora;
 
+    @Column(nullable = false)
+    private Long clienteId;
+
+    @Column(nullable = false)
+    private String clienteNombre;
+
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private TipoCliente tipoCliente;
+    private TipoCliente tipoPrecio;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal total;

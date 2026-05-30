@@ -27,7 +27,7 @@ public class CajaDiariaController {
         return ResponseEntity.ok(cajaDiariaService.cerrarCaja());
     }
 
-    @GetMapping("/balance")
+    @GetMapping
     public ResponseEntity<CajaDiariaDTO> obtenerBalanceDelDia() {
         return ResponseEntity.ok(cajaDiariaService.obtenerBalanceDelDia());
     }

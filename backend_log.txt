@@ -1,4 +1,22 @@
 [INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml
+Progress (1): 255 BProgress (2): 255 B | 249 BProgress (3): 255 B | 249 B | 398 BProgress (4): 255 B | 249 B | 398 B | 234 B                                           Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml (398 B at 537 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml (255 B at 343 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml (249 B at 336 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml
+Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml (234 B at 314 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml
+Progress (1): 242 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml (242 B at 6.9 kB/s)
+Progress (1): 3.9 kBProgress (1): 7.7 kB                    Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml
+Progress (1): 10 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml (10 kB at 256 kB/s)
+Progress (1): 375 BProgress (2): 375 B | 394 B                           Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml (394 B at 8.4 kB/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml (375 B at 8.7 kB/s)
+Progress (1): 3.1 kBProgress (1): 7.7 kBProgress (1): 12 kB Progress (1): 17 kBProgress (1): 20 kBProgress (1): 21 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml (21 kB at 308 kB/s)
 [INFO]
 [INFO] --------------< com.distribuidora:distribuidora-backend >---------------
 [INFO] Building distribuidora-backend 0.0.1-SNAPSHOT
@@ -18,15 +36,7 @@
 [INFO] skip non existing resourceDirectory /app/src/test/resources
 [INFO]
 [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ distribuidora-backend ---
-[INFO] Changes detected - recompiling the module! :source
-[INFO] Compiling 2 source files with javac [debug release 17] to target/test-classes
-[INFO] Annotation processing is enabled because one or more processors were found
-  on the class path. A future release of javac may disable annotation processing
-  unless at least one processor is specified by name (-processor), or a search
-  path is specified (--processor-path, --processor-module-path), or annotation
-  processing is enabled explicitly (-proc:only, -proc:full).
-  Use -Xlint:-options to suppress this message.
-  Use -proc:none to disable annotation processing.
+[INFO] Nothing to compile - all classes are up to date
 [INFO]
 [INFO] <<< spring-boot:3.2.5:run (default-cli) < test-compile @ distribuidora-backend <<<
 [INFO]
@@ -42,657 +52,50 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-05-29T20:02:06.990Z  INFO 186221 --- [           main] c.d.DistribuidoraApplication             : Starting DistribuidoraApplication using Java 21.0.10 with PID 186221 (/app/target/classes started by jules in /app)
-2026-05-29T20:02:06.993Z  INFO 186221 --- [           main] c.d.DistribuidoraApplication             : No active profile set, falling back to 1 default profile: "default"
-2026-05-29T20:02:07.922Z  INFO 186221 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-05-29T20:02:07.997Z  INFO 186221 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 3 JPA repository interfaces.
-2026-05-29T20:02:08.544Z  INFO 186221 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-05-29T20:02:08.559Z  INFO 186221 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-05-29T20:02:08.560Z  INFO 186221 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-05-29T20:02:08.624Z  INFO 186221 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-05-29T20:02:08.625Z  INFO 186221 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1577 ms
-2026-05-29T20:02:08.798Z  INFO 186221 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-05-29T20:02:08.869Z  INFO 186221 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-05-29T20:02:08.908Z  INFO 186221 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-05-29T20:02:09.161Z  INFO 186221 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-05-29T20:02:09.192Z  INFO 186221 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-05-29T20:02:09.484Z  INFO 186221 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@43e8f1c
-2026-05-29T20:02:09.488Z  INFO 186221 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-05-29T20:02:09.559Z  WARN 186221 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-05-29T20:02:09.565Z  WARN 186221 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-05-29T20:02:10.790Z  INFO 186221 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-05-29T20:02:10.889Z  INFO 186221 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-05-29T20:02:11.388Z  WARN 186221 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-05-29T20:02:11.828Z  INFO 186221 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2026-05-29T20:02:11.838Z  INFO 186221 --- [           main] c.d.DistribuidoraApplication             : Started DistribuidoraApplication in 5.341 seconds (process running for 5.874)
-2026-05-29T20:03:11.733Z  INFO 186221 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-05-29T20:03:11.733Z  INFO 186221 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-05-29T20:03:11.735Z  INFO 186221 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-05-30T17:57:06.253Z  INFO 433236 --- [           main] c.d.DistribuidoraApplication             : Starting DistribuidoraApplication using Java 21.0.10 with PID 433236 (/app/target/classes started by jules in /app)
+2026-05-30T17:57:06.263Z  INFO 433236 --- [           main] c.d.DistribuidoraApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-05-30T17:57:07.623Z  INFO 433236 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-05-30T17:57:07.714Z  INFO 433236 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2026-05-30T17:57:08.622Z  INFO 433236 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-05-30T17:57:08.642Z  INFO 433236 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-05-30T17:57:08.642Z  INFO 433236 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-05-30T17:57:08.707Z  INFO 433236 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-05-30T17:57:08.708Z  INFO 433236 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2318 ms
+2026-05-30T17:57:09.151Z  INFO 433236 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-05-30T17:57:09.244Z  INFO 433236 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-05-30T17:57:09.291Z  INFO 433236 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-05-30T17:57:09.698Z  INFO 433236 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-05-30T17:57:09.761Z  INFO 433236 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-05-30T17:57:10.072Z  INFO 433236 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7871d261
+2026-05-30T17:57:10.075Z  INFO 433236 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-05-30T17:57:10.124Z  WARN 433236 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-05-30T17:57:10.129Z  WARN 433236 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-05-30T17:57:11.426Z  INFO 433236 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
 Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
+    create table clientes (
+        id bigint not null auto_increment,
+        nombre varchar(255) not null,
+        telefono varchar(255),
+        tipo enum ('MINORISTA','MAYORISTA') not null,
+        version bigint,
+        primary key (id)
+    ) engine=InnoDB
 Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
+    alter table ventas
+       add column cliente_id bigint not null
 Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
+    alter table ventas
+       add column cliente_nombre varchar(255) not null
 Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    insert
-    into
-        cajas_diarias
-        (estado, fecha, ingresos_ventas, saldo_final, saldo_inicial)
-    values
-        (?, ?, ?, ?, ?)
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    insert
-    into
-        cajas_diarias
-        (estado, fecha, ingresos_ventas, saldo_final, saldo_inicial)
-    values
-        (?, ?, ?, ?, ?)
-Hibernate:
-    select
-        cd1_0.id,
-        cd1_0.estado,
-        cd1_0.fecha,
-        cd1_0.ingresos_ventas,
-        cd1_0.saldo_final,
-        cd1_0.saldo_inicial
-    from
-        cajas_diarias cd1_0
-    where
-        cd1_0.fecha=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
+    alter table ventas
+       add column tipo_precio enum ('MINORISTA','MAYORISTA') not null
+2026-05-30T17:57:11.596Z  INFO 433236 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-05-30T17:57:12.191Z  WARN 433236 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-05-30T17:57:12.764Z  INFO 433236 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-05-30T17:57:12.779Z  INFO 433236 --- [           main] c.d.DistribuidoraApplication             : Started DistribuidoraApplication in 7.3 seconds (process running for 7.731)
+2026-05-30T18:01:25.959Z  INFO 433236 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-05-30T18:01:25.960Z  INFO 433236 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-05-30T18:01:25.962Z  INFO 433236 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
 Hibernate:
     select
         cd1_0.id,

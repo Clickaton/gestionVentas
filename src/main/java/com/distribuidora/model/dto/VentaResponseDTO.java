@@ -17,7 +17,9 @@ import java.util.List;
 public class VentaResponseDTO {
     private Long id;
     private LocalDateTime fechaHora;
-    private TipoCliente tipoCliente;
+    private Long clienteId;
+    private String clienteNombre;
+    private TipoCliente tipoPrecio;
     private BigDecimal total;
     private List<DetalleVentaResponseDTO> detalles;
 }

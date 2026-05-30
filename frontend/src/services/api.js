@@ -10,16 +10,7 @@ const api = axios.create({
 api.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response && error.response.data) {
-      const { error: errorMsg } = error.response.data;
-      if (errorMsg) {
-        console.error('API Error:', errorMsg);
-        alert(errorMsg);
-      }
-    } else {
-      console.error('Network Error:', error.message);
-      alert('Error de conexión con el servidor.');
-    }
+    // We will let the components handle the error to use Toast instead of native alerts
     return Promise.reject(error);
   }
 );
@@ -28,6 +19,7 @@ export const ProductosService = {
   getAll: () => api.get('/productos'),
   createProducto: (data) => api.post('/productos', data),
   actualizarPrecios: (data) => api.post('/productos/actualizar-precios', data),
+  delete: (id) => api.delete(`/productos/${id}`),
 };
 
 export const VentasService = {
@@ -38,7 +30,13 @@ export const VentasService = {
 export const CajaService = {
   abrir: (saldoInicial = 0) => api.post(`/caja/abrir?saldoInicial=${saldoInicial}`),
   cerrar: () => api.post('/caja/cerrar'),
-  getBalance: () => api.get('/caja/balance'),
+  getBalance: () => api.get('/caja'),
+};
+
+export const ClientesService = {
+  getAll: () => api.get('/clientes'),
+  createCliente: (data) => api.post('/clientes', data),
+  delete: (id) => api.delete(`/clientes/${id}`),
 };
 
 export default api;

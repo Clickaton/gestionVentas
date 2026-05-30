@@ -17,8 +17,8 @@ import java.util.List;
 @Builder
 public class VentaRequestDTO {
 
-    @NotNull(message = "El tipo de cliente es obligatorio")
-    private TipoCliente tipoCliente;
+    @NotNull(message = "El ID del cliente es obligatorio")
+    private Long clienteId;
 
     @NotEmpty(message = "La venta debe tener al menos un detalle")
     @Valid

@@ -7,12 +7,14 @@ import com.distribuidora.model.dto.DetalleVentaResponseDTO;
 import com.distribuidora.model.dto.VentaRequestDTO;
 import com.distribuidora.model.dto.VentaResponseDTO;
 import com.distribuidora.model.entity.CajaDiaria;
+import com.distribuidora.model.entity.Cliente;
 import com.distribuidora.model.entity.DetalleVenta;
 import com.distribuidora.model.entity.Producto;
 import com.distribuidora.model.entity.Venta;
 import com.distribuidora.model.enums.EstadoCaja;
 import com.distribuidora.model.enums.TipoCliente;
 import com.distribuidora.repository.CajaDiariaRepository;
+import com.distribuidora.repository.ClienteRepository;
 import com.distribuidora.repository.ProductoRepository;
 import com.distribuidora.repository.VentaRepository;
 import lombok.RequiredArgsConstructor;
@@ -33,6 +35,7 @@ public class VentaService {
     private final VentaRepository ventaRepository;
     private final ProductoRepository productoRepository;
     private final CajaDiariaRepository cajaDiariaRepository;
+    private final ClienteRepository clienteRepository;
 
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public VentaResponseDTO registrarVenta(VentaRequestDTO requestDTO) {
@@ -44,9 +47,14 @@ public class VentaService {
             throw new BusinessException("La caja de hoy ya se encuentra cerrada");
         }
 
+        Cliente cliente = clienteRepository.findById(requestDTO.getClienteId())
+                .orElseThrow(() -> new BusinessException("Cliente no encontrado con id: " + requestDTO.getClienteId()));
+
         Venta venta = Venta.builder()
                 .fechaHora(LocalDateTime.now())
-                .tipoCliente(requestDTO.getTipoCliente())
+                .clienteId(cliente.getId())
+                .clienteNombre(cliente.getNombre())
+                .tipoPrecio(cliente.getTipo())
                 .total(BigDecimal.ZERO)
                 .build();
 
@@ -70,7 +78,7 @@ public class VentaService {
             productoRepository.save(producto);
 
             // Calcular precio según tipo de cliente
-            BigDecimal precioUnitario = requestDTO.getTipoCliente() == TipoCliente.MAYORISTA
+            BigDecimal precioUnitario = cliente.getTipo() == TipoCliente.MAYORISTA
                     ? producto.getPrecioMayorista() : producto.getPrecioMinorista();
 
             BigDecimal subtotal = precioUnitario.multiply(new BigDecimal(detalleDTO.getCantidad()));
@@ -111,7 +119,9 @@ public class VentaService {
         return VentaResponseDTO.builder()
                 .id(venta.getId())
                 .fechaHora(venta.getFechaHora())
-                .tipoCliente(venta.getTipoCliente())
+                .clienteId(venta.getClienteId())
+                .clienteNombre(venta.getClienteNombre())
+                .tipoPrecio(venta.getTipoPrecio())
                 .total(venta.getTotal())
                 .detalles(venta.getDetalles().stream().map(d -> DetalleVentaResponseDTO.builder()
                         .id(d.getId())

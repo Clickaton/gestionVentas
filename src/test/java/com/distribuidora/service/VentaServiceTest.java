@@ -5,11 +5,13 @@ import com.distribuidora.model.dto.DetalleVentaDTO;
 import com.distribuidora.model.dto.VentaRequestDTO;
 import com.distribuidora.model.dto.VentaResponseDTO;
 import com.distribuidora.model.entity.CajaDiaria;
+import com.distribuidora.model.entity.Cliente;
 import com.distribuidora.model.entity.Producto;
 import com.distribuidora.model.entity.Venta;
 import com.distribuidora.model.enums.EstadoCaja;
 import com.distribuidora.model.enums.TipoCliente;
 import com.distribuidora.repository.CajaDiariaRepository;
+import com.distribuidora.repository.ClienteRepository;
 import com.distribuidora.repository.ProductoRepository;
 import com.distribuidora.repository.VentaRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,6 +42,9 @@ class VentaServiceTest {
     @Mock
     private CajaDiariaRepository cajaDiariaRepository;
 
+    @Mock
+    private ClienteRepository clienteRepository;
+
     @InjectMocks
     private VentaService ventaService;
 
@@ -58,10 +63,16 @@ class VentaServiceTest {
     @Test
     void registrarVenta_Exitosa_DescuentaStock() {
         VentaRequestDTO request = VentaRequestDTO.builder()
-                .tipoCliente(TipoCliente.MINORISTA)
+                .clienteId(10L)
                 .detalles(List.of(
                         DetalleVentaDTO.builder().productoId(1L).cantidad(2).build()
                 ))
+                .build();
+
+        Cliente cliente = Cliente.builder()
+                .id(10L)
+                .nombre("Juan Perez")
+                .tipo(TipoCliente.MINORISTA)
                 .build();
 
         Producto producto = Producto.builder()
@@ -73,13 +84,19 @@ class VentaServiceTest {
                 .build();
 
         when(cajaDiariaRepository.findByFecha(any(LocalDate.class))).thenReturn(Optional.of(cajaAbierta));
+        when(clienteRepository.findById(10L)).thenReturn(Optional.of(cliente));
         when(productoRepository.findById(1L)).thenReturn(Optional.of(producto));
-        when(ventaRepository.save(any(Venta.class))).thenAnswer(i -> i.getArguments()[0]);
+        when(ventaRepository.save(any(Venta.class))).thenAnswer(i -> {
+            Venta v = (Venta) i.getArguments()[0];
+            v.setId(99L);
+            return v;
+        });
 
         VentaResponseDTO venta = ventaService.registrarVenta(request);
 
         assertNotNull(venta);
         assertEquals(new BigDecimal("1000.00"), venta.getTotal());
+        assertEquals("Juan Perez", venta.getClienteNombre());
         assertEquals(8, producto.getStockActual());
         assertEquals(new BigDecimal("1000.00"), cajaAbierta.getIngresosVentas());
 
@@ -91,10 +108,16 @@ class VentaServiceTest {
     @Test
     void registrarVenta_CantidadMayorAlStock_LanzaExcepcion() {
         VentaRequestDTO request = VentaRequestDTO.builder()
-                .tipoCliente(TipoCliente.MINORISTA)
+                .clienteId(10L)
                 .detalles(List.of(
                         DetalleVentaDTO.builder().productoId(1L).cantidad(15).build()
                 ))
+                .build();
+
+        Cliente cliente = Cliente.builder()
+                .id(10L)
+                .nombre("Juan Perez")
+                .tipo(TipoCliente.MINORISTA)
                 .build();
 
         Producto producto = Producto.builder()
@@ -105,6 +128,7 @@ class VentaServiceTest {
                 .build();
 
         when(cajaDiariaRepository.findByFecha(any(LocalDate.class))).thenReturn(Optional.of(cajaAbierta));
+        when(clienteRepository.findById(10L)).thenReturn(Optional.of(cliente));
         when(productoRepository.findById(1L)).thenReturn(Optional.of(producto));
 
         InsufficientStockException exception = assertThrows(InsufficientStockException.class, () ->
