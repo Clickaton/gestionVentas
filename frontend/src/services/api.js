@@ -26,6 +26,7 @@ api.interceptors.response.use(
 
 export const ProductosService = {
   getAll: () => api.get('/productos'),
+  createProducto: (data) => api.post('/productos', data),
   actualizarPrecios: (data) => api.post('/productos/actualizar-precios', data),
 };
 

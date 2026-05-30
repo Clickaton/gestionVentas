@@ -612,3 +612,263 @@ Hibernate:
         cajas_diarias cd1_0
     where
         cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    insert
+    into
+        cajas_diarias
+        (estado, fecha, ingresos_ventas, saldo_final, saldo_inicial)
+    values
+        (?, ?, ?, ?, ?)
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        p1_0.id
+    from
+        productos p1_0
+    where
+        p1_0.codigo=?
+    limit
+        ?
+Hibernate:
+    insert
+    into
+        productos
+        (activo, codigo, descripcion, nombre, precio_mayorista, precio_minorista, stock_actual, version)
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?)
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0

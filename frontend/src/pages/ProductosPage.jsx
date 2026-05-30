@@ -5,10 +5,20 @@ const ProductosPage = () => {
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isCreateModalOpen, setIsCreateModalOpen] = useState(false);
   const [updateData, setUpdateData] = useState({
     porcentaje: 0,
     actualizarMinorista: true,
     actualizarMayorista: true
+  });
+  const [newProducto, setNewProducto] = useState({
+    codigo: '',
+    nombre: '',
+    descripcion: '',
+    precioMinorista: '',
+    precioMayorista: '',
+    stockActual: '',
+    activo: true
   });
   const [selectedIds, setSelectedIds] = useState([]);
 
@@ -61,17 +71,50 @@ const ProductosPage = () => {
     }
   };
 
+  const handleCreateProducto = async (e) => {
+    e.preventDefault();
+    try {
+      await ProductosService.createProducto({
+        ...newProducto,
+        precioMinorista: parseFloat(newProducto.precioMinorista),
+        precioMayorista: parseFloat(newProducto.precioMayorista),
+        stockActual: parseInt(newProducto.stockActual, 10),
+      });
+      setIsCreateModalOpen(false);
+      setNewProducto({
+        codigo: '',
+        nombre: '',
+        descripcion: '',
+        precioMinorista: '',
+        precioMayorista: '',
+        stockActual: '',
+        activo: true
+      });
+      fetchProductos();
+      alert("Producto creado con éxito!");
+    } catch (e) {
+    }
+  };
+
   return (
     <div>
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-3xl font-bold">Gestión de Productos</h1>
-        <button
-          onClick={() => setIsModalOpen(true)}
-          className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 disabled:opacity-50"
-          disabled={selectedIds.length === 0}
-        >
-          Actualizar Precios Masivamente ({selectedIds.length})
-        </button>
+        <div className="flex space-x-2">
+          <button
+            onClick={() => setIsCreateModalOpen(true)}
+            className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+          >
+            Nuevo Producto
+          </button>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 disabled:opacity-50"
+            disabled={selectedIds.length === 0}
+          >
+            Actualizar Precios Masivamente ({selectedIds.length})
+          </button>
+        </div>
       </div>
 
       {loading ? (
@@ -159,6 +202,46 @@ const ProductosPage = () => {
               <div className="flex justify-end space-x-2">
                 <button type="button" onClick={() => setIsModalOpen(false)} className="px-4 py-2 border rounded text-gray-600 hover:bg-gray-50">Cancelar</button>
                 <button type="submit" className="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Actualizar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
+      {isCreateModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4">
+          <div className="bg-white p-6 rounded-lg w-full max-w-md max-h-[90vh] overflow-y-auto">
+            <h2 className="text-xl font-bold mb-4">Nuevo Producto</h2>
+            <form onSubmit={handleCreateProducto}>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">Código</label>
+                <input type="text" required value={newProducto.codigo} onChange={e => setNewProducto({...newProducto, codigo: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text" required value={newProducto.nombre} onChange={e => setNewProducto({...newProducto, nombre: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+              </div>
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700">Descripción</label>
+                <textarea value={newProducto.descripcion} onChange={e => setNewProducto({...newProducto, descripcion: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+              </div>
+              <div className="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Precio Minorista</label>
+                  <input type="number" step="0.01" min="0" required value={newProducto.precioMinorista} onChange={e => setNewProducto({...newProducto, precioMinorista: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">Precio Mayorista</label>
+                  <input type="number" step="0.01" min="0" required value={newProducto.precioMayorista} onChange={e => setNewProducto({...newProducto, precioMayorista: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+                </div>
+              </div>
+              <div className="mb-6">
+                <label className="block text-sm font-medium text-gray-700">Stock Inicial</label>
+                <input type="number" min="0" required value={newProducto.stockActual} onChange={e => setNewProducto({...newProducto, stockActual: e.target.value})} className="mt-1 block w-full rounded-md border-gray-300 border p-2 shadow-sm" />
+              </div>
+              <div className="flex justify-end space-x-2">
+                <button type="button" onClick={() => setIsCreateModalOpen(false)} className="px-4 py-2 border rounded text-gray-600 hover:bg-gray-50">Cancelar</button>
+                <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">Crear</button>
               </div>
             </form>
           </div>
