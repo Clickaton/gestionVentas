@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ProductosService } from '../services/api';
 import { useToast } from '../context/ToastContext';
+import { AuthContext } from '../context/AuthContext';
 import { Plus, Percent, Trash2, Tag } from 'lucide-react';
 import Modal from '../components/Modal';
 
 const ProductosPage = () => {
+  const { auth } = useContext(AuthContext);
+  const isAdmin = auth?.rol === 'ADMIN';
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -101,21 +104,23 @@ const ProductosPage = () => {
           <h1 className="text-3xl font-bold text-slate-800 tracking-tight">Catálogo de Productos</h1>
           <p className="text-slate-500 mt-1">Administra el inventario de leña y carbón</p>
         </div>
-        <div className="flex space-x-3">
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="flex items-center px-4 py-2 bg-indigo-50 text-indigo-600 rounded-lg font-medium hover:bg-indigo-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
-            disabled={selectedIds.length === 0}
-          >
-            <Percent size={18} className="mr-2" /> Aumento Masivo ({selectedIds.length})
-          </button>
-          <button
-            onClick={() => setIsCreateModalOpen(true)}
-            className="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition shadow-sm shadow-indigo-600/20"
-          >
-            <Plus size={18} className="mr-2" /> Nuevo Producto
-          </button>
-        </div>
+        {isAdmin && (
+          <div className="flex space-x-3">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center px-4 py-2 bg-indigo-50 text-indigo-600 rounded-lg font-medium hover:bg-indigo-100 transition disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={selectedIds.length === 0}
+            >
+              <Percent size={18} className="mr-2" /> Aumento Masivo ({selectedIds.length})
+            </button>
+            <button
+              onClick={() => setIsCreateModalOpen(true)}
+              className="flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg font-medium hover:bg-indigo-700 transition shadow-sm shadow-indigo-600/20"
+            >
+              <Plus size={18} className="mr-2" /> Nuevo Producto
+            </button>
+          </div>
+        )}
       </div>
 
       {loading ? (
@@ -126,19 +131,19 @@ const ProductosPage = () => {
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr className="bg-slate-50/50 border-b border-slate-100">
-                  <th className="p-4 w-12"><input type="checkbox" onChange={handleSelectAll} checked={selectedIds.length === productos.length && productos.length > 0} className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-600" /></th>
+                  {isAdmin && <th className="p-4 w-12"><input type="checkbox" onChange={handleSelectAll} checked={selectedIds.length === productos.length && productos.length > 0} className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-600" /></th>}
                   <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Código</th>
                   <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Producto</th>
                   <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">P. Minorista</th>
                   <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">P. Mayorista</th>
                   <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider">Stock</th>
-                  <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Acciones</th>
+                  {isAdmin && <th className="p-4 text-xs font-semibold text-slate-500 uppercase tracking-wider text-right">Acciones</th>}
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
                 {productos.map(prod => (
                   <tr key={prod.id} className="hover:bg-slate-50/50 transition-colors">
-                    <td className="p-4"><input type="checkbox" checked={selectedIds.includes(prod.id)} onChange={() => handleSelectProduct(prod.id)} className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-600" /></td>
+                    {isAdmin && <td className="p-4"><input type="checkbox" checked={selectedIds.includes(prod.id)} onChange={() => handleSelectProduct(prod.id)} className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-600" /></td>}
                     <td className="p-4 text-sm font-medium text-slate-500">{prod.codigo}</td>
                     <td className="p-4">
                       <div className="flex items-center">
@@ -153,11 +158,13 @@ const ProductosPage = () => {
                         {prod.stockActual} und
                       </span>
                     </td>
-                    <td className="p-4 text-right">
-                      <button onClick={() => handleDelete(prod.id)} className="p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-colors">
-                        <Trash2 size={18} />
-                      </button>
-                    </td>
+                    {isAdmin && (
+                      <td className="p-4 text-right">
+                        <button onClick={() => handleDelete(prod.id)} className="p-2 text-slate-400 hover:text-rose-500 hover:bg-rose-50 rounded-lg transition-colors">
+                          <Trash2 size={18} />
+                        </button>
+                      </td>
+                    )}
                   </tr>
                 ))}
               </tbody>
