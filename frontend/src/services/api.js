@@ -44,12 +44,23 @@ export const CajaService = {
   abrir: (saldoInicial = 0) => api.post(`/caja/abrir?saldoInicial=${saldoInicial}`),
   cerrar: () => api.post('/caja/cerrar'),
   getBalance: () => api.get('/caja'),
+  registrarGasto: (data) => api.post('/caja/gastos', data),
 };
 
 export const ClientesService = {
   getAll: () => api.get('/clientes'),
   createCliente: (data) => api.post('/clientes', data),
   delete: (id) => api.delete(`/clientes/${id}`),
+};
+
+export const InventarioService = {
+  getMovimientos: () => api.get('/inventario/movimientos'),
+  registrarAjuste: (data) => api.post('/inventario/ajuste', data),
+};
+
+export const ReportesService = {
+  getVentasSemana: () => api.get('/reportes/ventas-semana'),
+  getTopProductos: () => api.get('/reportes/top-productos'),
 };
 
 export default api;

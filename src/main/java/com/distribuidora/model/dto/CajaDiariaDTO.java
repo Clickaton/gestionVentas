@@ -18,6 +18,7 @@ public class CajaDiariaDTO {
     private LocalDate fecha;
     private BigDecimal saldoInicial;
     private BigDecimal ingresosVentas;
+    private BigDecimal gastos;
     private BigDecimal saldoFinal;
     private EstadoCaja estado;
 }

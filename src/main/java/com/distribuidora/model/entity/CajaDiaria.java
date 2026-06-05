@@ -31,6 +31,10 @@ public class CajaDiaria {
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal ingresosVentas;
 
+    @Builder.Default
+    @Column(nullable = false, precision = 10, scale = 2)
+    private BigDecimal gastos = BigDecimal.ZERO;
+
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal saldoFinal;
 

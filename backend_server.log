@@ -1,4 +1,22 @@
 [INFO] Scanning for projects...
+Downloading from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml
+Progress (1): 234 BProgress (2): 234 B | 249 BProgress (3): 234 B | 249 B | 398 B                                   Downloaded from central: https://repo.maven.apache.org/maven2/org/jooq/maven-metadata.xml (398 B at 548 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/flywaydb/maven-metadata.xml (234 B at 321 B/s)
+Downloaded from central: https://repo.maven.apache.org/maven2/org/springframework/boot/maven-metadata.xml (249 B at 341 B/s)
+Progress (1): 255 B                   Downloaded from central: https://repo.maven.apache.org/maven2/io/github/git-commit-id/maven-metadata.xml (255 B at 346 B/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml
+Downloading from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml
+Progress (1): 394 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/liquibase/maven-metadata.xml (394 B at 13 kB/s)
+Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml
+Progress (1): 375 B                   Downloaded from central: https://repo.maven.apache.org/maven2/org/jetbrains/kotlin/maven-metadata.xml (375 B at 11 kB/s)
+Progress (1): 4.6 kBProgress (1): 9.7 kBProgress (2): 9.7 kB | 242 B                            Downloaded from central: https://repo.maven.apache.org/maven2/org/graalvm/buildtools/maven-metadata.xml (242 B at 5.8 kB/s)
+Progress (1): 14 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-metadata.xml (14 kB at 325 kB/s)
+Progress (1): 3.1 kBProgress (1): 7.7 kBProgress (1): 12 kB Progress (1): 17 kBProgress (1): 20 kBProgress (1): 21 kB                   Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/mojo/maven-metadata.xml (21 kB at 312 kB/s)
 [INFO]
 [INFO] --------------< com.distribuidora:distribuidora-backend >---------------
 [INFO] Building distribuidora-backend 0.0.1-SNAPSHOT
@@ -34,243 +52,71 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.2.5)
 
-2026-06-01T14:03:52.158Z  INFO 572480 --- [           main] c.d.DistribuidoraApplication             : Starting DistribuidoraApplication using Java 21.0.10 with PID 572480 (/app/target/classes started by jules in /app)
-2026-06-01T14:03:52.163Z  INFO 572480 --- [           main] c.d.DistribuidoraApplication             : No active profile set, falling back to 1 default profile: "default"
-2026-06-01T14:03:53.864Z  INFO 572480 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-06-01T14:03:54.028Z  INFO 572480 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 5 JPA repository interfaces.
-2026-06-01T14:03:55.398Z  INFO 572480 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2026-06-01T14:03:55.420Z  INFO 572480 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-06-01T14:03:55.421Z  INFO 572480 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
-2026-06-01T14:03:55.502Z  INFO 572480 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2026-06-01T14:03:55.504Z  INFO 572480 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3206 ms
-2026-06-01T14:03:55.731Z  INFO 572480 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-06-01T14:03:55.813Z  INFO 572480 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
-2026-06-01T14:03:55.859Z  INFO 572480 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2026-06-01T14:03:56.212Z  INFO 572480 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-06-01T14:03:56.268Z  INFO 572480 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-06-01T14:03:56.697Z  INFO 572480 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@40f1aa95
-2026-06-01T14:03:56.701Z  INFO 572480 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-06-01T14:03:56.785Z  WARN 572480 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
-2026-06-01T14:03:56.793Z  WARN 572480 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-06-01T14:03:58.125Z  INFO 572480 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-06-01T14:03:58.217Z  INFO 572480 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-06-01T14:03:58.999Z  WARN 572480 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2026-06-01T14:03:59.445Z  INFO 572480 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@33b4c775, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@678b3746, org.springframework.security.web.context.SecurityContextHolderFilter@4446a191, org.springframework.security.web.header.HeaderWriterFilter@6a3c1b56, org.springframework.web.filter.CorsFilter@45689582, org.springframework.security.web.authentication.logout.LogoutFilter@7be9e9fc, com.distribuidora.backend.security.JwtAuthenticationFilter@49ea4b65, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5e0602ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1a865ebf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@73db1a6, org.springframework.security.web.session.SessionManagementFilter@4110ffe5, org.springframework.security.web.access.ExceptionTranslationFilter@25134e01, org.springframework.security.web.access.intercept.AuthorizationFilter@7a05cdc8]
-2026-06-01T14:03:59.769Z  INFO 572480 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
-2026-06-01T14:03:59.778Z  INFO 572480 --- [           main] c.d.DistribuidoraApplication             : Started DistribuidoraApplication in 8.333 seconds (process running for 9.334)
+2026-06-05T20:59:53.731Z  INFO 742279 --- [           main] c.d.DistribuidoraApplication             : Starting DistribuidoraApplication using Java 21.0.10 with PID 742279 (/app/target/classes started by jules in /app)
+2026-06-05T20:59:53.737Z  INFO 742279 --- [           main] c.d.DistribuidoraApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-06-05T20:59:55.473Z  INFO 742279 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-05T20:59:55.562Z  INFO 742279 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 8 JPA repository interfaces.
+2026-06-05T20:59:56.283Z  INFO 742279 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-06-05T20:59:56.298Z  INFO 742279 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-06-05T20:59:56.298Z  INFO 742279 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+2026-06-05T20:59:56.351Z  INFO 742279 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-06-05T20:59:56.352Z  INFO 742279 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2507 ms
+2026-06-05T20:59:56.515Z  INFO 742279 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-06-05T20:59:56.574Z  INFO 742279 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-06-05T20:59:56.649Z  INFO 742279 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-06-05T20:59:57.089Z  INFO 742279 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-05T20:59:57.139Z  INFO 742279 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-06-05T20:59:57.428Z  INFO 742279 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27dbaa33
+2026-06-05T20:59:57.431Z  INFO 742279 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-06-05T20:59:57.489Z  WARN 742279 --- [           main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2026-06-05T20:59:57.495Z  WARN 742279 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-05T20:59:58.790Z  INFO 742279 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate:
+    alter table cajas_diarias
+       add column gastos decimal(10,2) not null
+Hibernate:
+    create table gastos (
+        id bigint not null auto_increment,
+        concepto varchar(255) not null,
+        fecha_hora datetime(6) not null,
+        monto decimal(10,2) not null,
+        caja_diaria_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate:
+    create table movimientos_stock (
+        id bigint not null auto_increment,
+        cantidad integer not null,
+        fecha_hora datetime(6) not null,
+        motivo varchar(255) not null,
+        tipo enum ('INGRESO','EGRESO','AJUSTE') not null,
+        producto_id bigint not null,
+        primary key (id)
+    ) engine=InnoDB
+Hibernate:
+    alter table gastos
+       add constraint FKd277n4bttevsemsmesp59l8gh
+       foreign key (caja_diaria_id)
+       references cajas_diarias (id)
+Hibernate:
+    alter table movimientos_stock
+       add constraint FK52bo6ht9yrbmkldis6p3c0we1
+       foreign key (producto_id)
+       references productos (id)
+2026-06-05T20:59:58.952Z  INFO 742279 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-05T20:59:59.723Z  INFO 742279 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-05T21:00:00.700Z  WARN 742279 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-05T21:00:01.102Z  INFO 742279 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@72a4f3f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3dfef314, org.springframework.security.web.context.SecurityContextHolderFilter@6d95b51d, org.springframework.security.web.header.HeaderWriterFilter@589c648, org.springframework.web.filter.CorsFilter@7edab945, org.springframework.security.web.authentication.logout.LogoutFilter@545bc8e1, com.distribuidora.backend.security.JwtAuthenticationFilter@6a905513, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60b721c9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f2ab774, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@533d28aa, org.springframework.security.web.session.SessionManagementFilter@409a164d, org.springframework.security.web.access.ExceptionTranslationFilter@3fd7f545, org.springframework.security.web.access.intercept.AuthorizationFilter@6bfa228c]
+2026-06-05T21:00:01.450Z  INFO 742279 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-06-05T21:00:01.460Z  INFO 742279 --- [           main] c.d.DistribuidoraApplication             : Started DistribuidoraApplication in 8.409 seconds (process running for 9.286)
 Hibernate:
     select
         count(*)
     from
         usuarios u1_0
-Hibernate:
-    insert
-    into
-        usuarios
-        (password, rol, username)
-    values
-        (?, ?, ?)
-Hibernate:
-    insert
-    into
-        usuarios
-        (password, rol, username)
-    values
-        (?, ?, ?)
-Usuarios de prueba creados: admin/admin123 (ADMIN), operador/operador123 (OPERADOR)
-2026-06-01T14:04:42.663Z  INFO 572480 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-06-01T14:04:42.663Z  INFO 572480 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-06-01T14:04:42.665Z  INFO 572480 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        c1_0.id,
-        c1_0.nombre,
-        c1_0.telefono,
-        c1_0.tipo,
-        c1_0.version
-    from
-        clientes c1_0
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        c1_0.id,
-        c1_0.nombre,
-        c1_0.telefono,
-        c1_0.tipo,
-        c1_0.version
-    from
-        clientes c1_0
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
-Hibernate:
-    select
-        u1_0.id,
-        u1_0.password,
-        u1_0.rol,
-        u1_0.username
-    from
-        usuarios u1_0
-    where
-        u1_0.username=?
-Hibernate:
-    select
-        p1_0.id,
-        p1_0.activo,
-        p1_0.codigo,
-        p1_0.descripcion,
-        p1_0.nombre,
-        p1_0.precio_mayorista,
-        p1_0.precio_minorista,
-        p1_0.stock_actual,
-        p1_0.version
-    from
-        productos p1_0
+2026-06-05T21:01:28.977Z  INFO 742279 --- [nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-06-05T21:01:28.978Z  INFO 742279 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-06-05T21:01:28.980Z  INFO 742279 --- [nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 Hibernate:
     select
         u1_0.id,
@@ -306,6 +152,7 @@ Hibernate:
         cd1_0.id,
         cd1_0.estado,
         cd1_0.fecha,
+        cd1_0.gastos,
         cd1_0.ingresos_ventas,
         cd1_0.saldo_final,
         cd1_0.saldo_inicial
@@ -328,6 +175,7 @@ Hibernate:
         cd1_0.id,
         cd1_0.estado,
         cd1_0.fecha,
+        cd1_0.gastos,
         cd1_0.ingresos_ventas,
         cd1_0.saldo_final,
         cd1_0.saldo_inicial
@@ -347,6 +195,73 @@ Hibernate:
         u1_0.username=?
 Hibernate:
     select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
         p1_0.id,
         p1_0.activo,
         p1_0.codigo,
@@ -381,3 +296,711 @@ Hibernate:
         p1_0.version
     from
         productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    insert
+    into
+        movimientos_stock
+        (cantidad, fecha_hora, motivo, producto_id, tipo)
+    values
+        (?, ?, ?, ?, ?)
+Hibernate:
+    update
+        productos
+    set
+        activo=?,
+        codigo=?,
+        descripcion=?,
+        nombre=?,
+        precio_mayorista=?,
+        precio_minorista=?,
+        stock_actual=?,
+        version=?
+    where
+        id=?
+        and version=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    insert
+    into
+        cajas_diarias
+        (estado, fecha, gastos, ingresos_ventas, saldo_final, saldo_inicial)
+    values
+        (?, ?, ?, ?, ?, ?)
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.nombre,
+        sum(dv1_0.cantidad)
+    from
+        detalles_venta dv1_0
+    join
+        productos p1_0
+            on p1_0.id=dv1_0.producto_id
+    group by
+        p1_0.id,
+        p1_0.nombre
+    order by
+        sum(dv1_0.cantidad) desc
+    limit
+        ?, ?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.nombre,
+        sum(dv1_0.cantidad)
+    from
+        detalles_venta dv1_0
+    join
+        productos p1_0
+            on p1_0.id=dv1_0.producto_id
+    group by
+        p1_0.id,
+        p1_0.nombre
+    order by
+        sum(dv1_0.cantidad) desc
+    limit
+        ?, ?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        sum(v1_0.total)
+    from
+        ventas v1_0
+    where
+        v1_0.fecha_hora>=?
+        and v1_0.fecha_hora<=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    insert
+    into
+        movimientos_stock
+        (cantidad, fecha_hora, motivo, producto_id, tipo)
+    values
+        (?, ?, ?, ?, ?)
+Hibernate:
+    update
+        productos
+    set
+        activo=?,
+        codigo=?,
+        descripcion=?,
+        nombre=?,
+        precio_mayorista=?,
+        precio_minorista=?,
+        stock_actual=?,
+        version=?
+    where
+        id=?
+        and version=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+Hibernate:
+    select
+        ms1_0.id,
+        ms1_0.cantidad,
+        ms1_0.fecha_hora,
+        ms1_0.motivo,
+        ms1_0.producto_id,
+        ms1_0.tipo
+    from
+        movimientos_stock ms1_0
+    order by
+        ms1_0.fecha_hora desc
+Hibernate:
+    select
+        p1_0.id,
+        p1_0.activo,
+        p1_0.codigo,
+        p1_0.descripcion,
+        p1_0.nombre,
+        p1_0.precio_mayorista,
+        p1_0.precio_minorista,
+        p1_0.stock_actual,
+        p1_0.version
+    from
+        productos p1_0
+    where
+        p1_0.id=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        cd1_0.id,
+        cd1_0.estado,
+        cd1_0.fecha,
+        cd1_0.gastos,
+        cd1_0.ingresos_ventas,
+        cd1_0.saldo_final,
+        cd1_0.saldo_inicial
+    from
+        cajas_diarias cd1_0
+    where
+        cd1_0.fecha=?

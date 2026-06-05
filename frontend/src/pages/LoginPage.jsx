@@ -21,7 +21,7 @@ const LoginPage = () => {
       if (response.data.rol === 'OPERADOR') {
         navigate('/ventas');
       } else {
-        navigate('/caja');
+        navigate('/dashboard');
       }
     } catch (error) {
       showToast('Credenciales inválidas', 'error');

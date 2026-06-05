@@ -13,10 +13,13 @@ import com.distribuidora.model.entity.Producto;
 import com.distribuidora.model.entity.Venta;
 import com.distribuidora.model.enums.EstadoCaja;
 import com.distribuidora.model.enums.TipoCliente;
+import com.distribuidora.model.entity.MovimientoStock;
+import com.distribuidora.model.enums.TipoMovimiento;
 import com.distribuidora.repository.CajaDiariaRepository;
 import com.distribuidora.repository.ClienteRepository;
 import com.distribuidora.repository.ProductoRepository;
 import com.distribuidora.repository.VentaRepository;
+import com.distribuidora.repository.MovimientoStockRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;
@@ -36,6 +39,7 @@ public class VentaService {
     private final ProductoRepository productoRepository;
     private final CajaDiariaRepository cajaDiariaRepository;
     private final ClienteRepository clienteRepository;
+    private final MovimientoStockRepository movimientoStockRepository;
 
     @Transactional(isolation = Isolation.READ_COMMITTED)
     public VentaResponseDTO registrarVenta(VentaRequestDTO requestDTO) {
@@ -95,13 +99,26 @@ public class VentaService {
         }
 
         venta.setTotal(totalVenta);
+        Venta savedVenta = ventaRepository.save(venta);
+
+        // Registrar movimientos de stock
+        for (DetalleVenta detalle : savedVenta.getDetalles()) {
+            MovimientoStock movimiento = MovimientoStock.builder()
+                    .producto(detalle.getProducto())
+                    .tipo(TipoMovimiento.EGRESO)
+                    .cantidad(detalle.getCantidad())
+                    .motivo("Venta #" + savedVenta.getId())
+                    .fechaHora(LocalDateTime.now())
+                    .build();
+            movimientoStockRepository.save(movimiento);
+        }
 
         // Actualizar caja
         caja.setIngresosVentas(caja.getIngresosVentas().add(totalVenta));
-        caja.setSaldoFinal(caja.getSaldoInicial().add(caja.getIngresosVentas()));
+        caja.setSaldoFinal(caja.getSaldoInicial().add(caja.getIngresosVentas()).subtract(caja.getGastos()));
         cajaDiariaRepository.save(caja);
 
-        return mapToDTO(ventaRepository.save(venta));
+        return mapToDTO(savedVenta);
     }
 
     @Transactional(readOnly = true)

@@ -1,7 +1,9 @@
 package com.distribuidora.controller;
 
 import com.distribuidora.model.dto.CajaDiariaDTO;
+import com.distribuidora.model.dto.GastoDTO;
 import com.distribuidora.service.CajaDiariaService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -32,5 +34,10 @@ public class CajaDiariaController {
     @GetMapping
     public ResponseEntity<CajaDiariaDTO> obtenerBalanceDelDia() {
         return ResponseEntity.ok(cajaDiariaService.obtenerBalanceDelDia());
+    }
+
+    @PostMapping("/gastos")
+    public ResponseEntity<CajaDiariaDTO> registrarGasto(@Valid @RequestBody GastoDTO gastoDTO) {
+        return new ResponseEntity<>(cajaDiariaService.registrarGasto(gastoDTO), HttpStatus.CREATED);
     }
 }

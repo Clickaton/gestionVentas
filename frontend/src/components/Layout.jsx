@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
-import { WalletCards, Package, ShoppingCart, Users, History, LogOut } from 'lucide-react';
+import { WalletCards, Package, ShoppingCart, Users, History, LogOut, LayoutDashboard, ClipboardList } from 'lucide-react';
 import { AuthContext } from '../context/AuthContext';
 
 const Layout = () => {
@@ -28,10 +28,16 @@ const Layout = () => {
 
         <nav className="flex-1 px-4 py-6 space-y-2">
           {isAdmin && (
-            <NavLink to="/caja" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
-              <WalletCards size={20} className="mr-3" />
-              Caja Diaria
-            </NavLink>
+            <>
+              <NavLink to="/dashboard" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
+                <LayoutDashboard size={20} className="mr-3" />
+                Dashboard
+              </NavLink>
+              <NavLink to="/caja" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
+                <WalletCards size={20} className="mr-3" />
+                Caja Diaria
+              </NavLink>
+            </>
           )}
           <NavLink to="/ventas" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
             <ShoppingCart size={20} className="mr-3" />
@@ -46,10 +52,16 @@ const Layout = () => {
             Clientes
           </NavLink>
           {isAdmin && (
-            <NavLink to="/historial" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
-              <History size={20} className="mr-3" />
-              Historial de Ventas
-            </NavLink>
+            <>
+              <NavLink to="/inventario" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
+                <ClipboardList size={20} className="mr-3" />
+                Inventario
+              </NavLink>
+              <NavLink to="/historial" className={({isActive}) => `flex items-center px-4 py-3 rounded-xl transition-all duration-200 ${isActive ? 'bg-indigo-600/10 text-indigo-400 font-medium' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200'}`}>
+                <History size={20} className="mr-3" />
+                Historial de Ventas
+              </NavLink>
+            </>
           )}
         </nav>
 

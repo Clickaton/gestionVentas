@@ -10,8 +10,10 @@ import com.distribuidora.model.entity.Producto;
 import com.distribuidora.model.entity.Venta;
 import com.distribuidora.model.enums.EstadoCaja;
 import com.distribuidora.model.enums.TipoCliente;
+import com.distribuidora.model.entity.MovimientoStock;
 import com.distribuidora.repository.CajaDiariaRepository;
 import com.distribuidora.repository.ClienteRepository;
+import com.distribuidora.repository.MovimientoStockRepository;
 import com.distribuidora.repository.ProductoRepository;
 import com.distribuidora.repository.VentaRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -44,6 +46,9 @@ class VentaServiceTest {
 
     @Mock
     private ClienteRepository clienteRepository;
+
+    @Mock
+    private MovimientoStockRepository movimientoStockRepository;
 
     @InjectMocks
     private VentaService ventaService;
@@ -103,6 +108,7 @@ class VentaServiceTest {
         verify(productoRepository, times(1)).save(producto);
         verify(cajaDiariaRepository, times(1)).save(cajaAbierta);
         verify(ventaRepository, times(1)).save(any(Venta.class));
+        verify(movimientoStockRepository, times(1)).save(any(MovimientoStock.class));
     }
 
     @Test
