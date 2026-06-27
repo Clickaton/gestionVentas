@@ -1,8 +1,8 @@
-package com.distribuidora.backend.config;
+package com.distribuidora.config;
 
-import com.distribuidora.backend.model.Rol;
-import com.distribuidora.backend.model.Usuario;
-import com.distribuidora.backend.repository.UsuarioRepository;
+import com.distribuidora.model.enums.Rol;
+import com.distribuidora.model.entity.Usuario;
+import com.distribuidora.repository.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;

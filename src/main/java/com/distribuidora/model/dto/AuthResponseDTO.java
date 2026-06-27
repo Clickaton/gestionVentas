@@ -1,6 +1,6 @@
-package com.distribuidora.backend.dto;
+package com.distribuidora.model.dto;
 
-import com.distribuidora.backend.model.Rol;
+import com.distribuidora.model.enums.Rol;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.distribuidora.backend.dto;
+package com.distribuidora.model.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

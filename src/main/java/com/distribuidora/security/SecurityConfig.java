@@ -1,4 +1,4 @@
-package com.distribuidora.backend.security;
+package com.distribuidora.security;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

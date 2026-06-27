@@ -1,4 +1,4 @@
-package com.distribuidora.backend.security;
+package com.distribuidora.security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,4 +1,4 @@
-package com.distribuidora.backend.security;
+package com.distribuidora.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

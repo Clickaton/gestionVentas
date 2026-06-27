@@ -1,10 +1,10 @@
-package com.distribuidora.backend.controller;
+package com.distribuidora.controller;
 
-import com.distribuidora.backend.dto.AuthRequestDTO;
-import com.distribuidora.backend.dto.AuthResponseDTO;
-import com.distribuidora.backend.model.Usuario;
-import com.distribuidora.backend.repository.UsuarioRepository;
-import com.distribuidora.backend.security.JwtService;
+import com.distribuidora.model.dto.AuthRequestDTO;
+import com.distribuidora.model.dto.AuthResponseDTO;
+import com.distribuidora.model.entity.Usuario;
+import com.distribuidora.repository.UsuarioRepository;
+import com.distribuidora.security.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

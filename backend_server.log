@@ -1004,3 +1004,43 @@ Hibernate:
         cajas_diarias cd1_0
     where
         cd1_0.fecha=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?
+Hibernate:
+    select
+        u1_0.id,
+        u1_0.password,
+        u1_0.rol,
+        u1_0.username
+    from
+        usuarios u1_0
+    where
+        u1_0.username=?

@@ -1,6 +1,6 @@
-package com.distribuidora.backend.repository;
+package com.distribuidora.repository;
 
-import com.distribuidora.backend.model.Usuario;
+import com.distribuidora.model.entity.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

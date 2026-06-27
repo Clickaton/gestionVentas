@@ -1,4 +1,4 @@
-package com.distribuidora.backend.model;
+package com.distribuidora.model.enums;
 
 public enum Rol {
     ADMIN,
